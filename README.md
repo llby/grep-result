@@ -1,1 +1,7 @@
-# grep_result
+# grep-result
+
+## Install
+
+```
+pip install grep_result
+```
