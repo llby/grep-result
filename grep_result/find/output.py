@@ -2,11 +2,11 @@ import pandas
 import numpy
 import os
 
-def export_csv(datas, *args):
+def export_csv(listings, *args):
   df = pandas.DataFrame()
   name = args[0]
   os.system("rm %s"%(name))
-  for data in datas:
+  for data in listings:
     row = pandas.DataFrame([
       [data['file'],
        data['count']]],
