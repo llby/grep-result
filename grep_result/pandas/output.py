@@ -32,3 +32,8 @@ def count_by_path_initial(listings):
 def count_by_2path(listings):
   df = listings.groupby(listings['path'].str.extract('(\w+/\w+)')).apply(lambda x: x['count'].sum())
   return pandas.DataFrame(df, columns=['count'])
+
+def export_html(listings, *args):
+  df = pandas.DataFrame(listings)
+  return df[['path','number','row']].to_html()
+  
